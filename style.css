@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #B2C891;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+html,
+body {
+  font-family: 'Roboto', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #B2C891;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  position: relative;
+  top: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li.logo {
+  background: white;
+  font-size: 30px;
+  font-weight: 600;
+  max-width: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav a {
+  color: black;
+  display: inline-block;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  padding: 20px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+nav a:hover {
+  color: aqua;
+}
+
+.fixed-nav nav {
+  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
+}
+
+.fixed-nav .site-wrap {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.pages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (100vm)[4];
+      grid-template-rows: repeat(4, 100vm);
+  min-height: 100vh;
+}
+
+.page {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid red;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+}
+
+#page-1 {
+  background: #949494;
+}
+
+#page-2 {
+  background: #B2B2B2;
+}
+
+#page-3 {
+  background: #D6D6D6;
+}
+
+#page-4 {
+  background: #D9D5D2;
+}
+
+.site-wrap {
+  background: white;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  margin: 70px auto;
+  max-width: 700px;
+  padding: 40px;
+  text-align: justify;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.aboutme-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 40vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  width: 60vw;
+}
+
+.aboutme-div img {
+  border: 1px solid #f00;
+  border-radius: 20%;
+  margin: 10px;
+  max-height: 20vh;
+  padding: 10px;
+}
+
+.skills-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border: 1px solid #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  height: 40vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 60vw;
+}
+
+.skill-div {
+  border: 1px solid #f00;
+  border-radius: 50%;
+  height: 15vmin;
+  text-align: center;
+  width: 15vmin;
+}
+/*# sourceMappingURL=style.css.map */
