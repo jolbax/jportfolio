@@ -64,10 +64,11 @@ nav li.logo {
 nav a {
   color: black;
   display: inline-block;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
+  font-weight: bolder;
   padding: 20px;
   text-decoration: none;
+  text-transform: lowercase;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -133,6 +134,16 @@ nav a:hover {
 
 #page-4 {
   background: #D9D5D2;
+}
+
+@media (max-width: 500px) {
+  nav a {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.5vw;
+    font-weight: normal;
+    padding: 10px;
+  }
 }
 
 .site-wrap {

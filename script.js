@@ -82,10 +82,6 @@ function scrollIt(destination, duration = 200, easing = "linear", callback) {
       Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
     );
 
-    console.log(
-      Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
-    );
-
     if (window.pageYOffset === destinationOffsetToScroll) {
       if (callback) {
         callback();
@@ -98,13 +94,24 @@ function scrollIt(destination, duration = 200, easing = "linear", callback) {
 
   scroll();
 }
-function logDestination(destinationOffsetToScroll) {
-  console.log("I should log something..");
-  console.log(destinationOffsetToScroll);
+
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function () {
+        let context = this, args = arguments;
+        let later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 }
 
 function fixNav() {
-    console.log(window.scrollY, topOfNav);
+    // console.log(window.scrollY, topOfNav);
     if (window.scrollY >= topOfNav) {
         document.body.style.paddingTop = nav.offsetHeight + "px";
         document.body.classList.add("fixed-nav");
@@ -124,7 +131,6 @@ links.forEach(link =>
       document.querySelector(`#${link.dataset.page}`).offsetTop,
       (duration = 1000),
       (easing = "easeInQuad"),
-      logDestination
     )
   )
 );
@@ -133,4 +139,4 @@ links.forEach(link =>
 based on WesBos example */
 const topOfNav = nav.offsetTop;
 
-document.addEventListener("scroll", fixNav);
+document.addEventListener("scroll", debounce(fixNav, 10));
