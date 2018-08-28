@@ -182,9 +182,16 @@ nav {
 }
 
 .skill-div {
+  align-items: center;
   border: 1px solid $border-dev;
-  border-radius: 50%;
-  height: 15vmin;
-  text-align: center;
-  width: 15vmin;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    border: 1px solid $border-dev;
+    border-radius: 50%;
+    margin: 0;
+    max-width: 10vmin;
+    padding: 0;
+  }
 }

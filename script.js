@@ -96,29 +96,30 @@ function scrollIt(destination, duration = 200, easing = "linear", callback) {
 }
 
 function debounce(func, wait = 20, immediate = true) {
-    let timeout;
-    return function () {
-        let context = this, args = arguments;
-        let later = function () {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        let callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+  let timeout;
+  return function() {
+    let context = this,
+      args = arguments;
+    let later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
     };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 }
 
 function fixNav() {
-    // console.log(window.scrollY, topOfNav);
-    if (window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + "px";
-        document.body.classList.add("fixed-nav");
-    } else {
-        document.body.classList.remove("fixed-nav");
-        document.body.style.paddingTop = 0;
-    }
+  // console.log(window.scrollY, topOfNav);
+  if (window.scrollY >= topOfNav) {
+    document.body.style.paddingTop = nav.offsetHeight + "px";
+    document.body.classList.add("fixed-nav");
+  } else {
+    document.body.classList.remove("fixed-nav");
+    document.body.style.paddingTop = 0;
+  }
 }
 
 /* Adding animated scrolling funtionality base on
@@ -130,7 +131,7 @@ links.forEach(link =>
     scrollIt(
       document.querySelector(`#${link.dataset.page}`).offsetTop,
       (duration = 1000),
-      (easing = "easeInQuad"),
+      (easing = "easeInQuad")
     )
   )
 );
@@ -140,3 +141,61 @@ based on WesBos example */
 const topOfNav = nav.offsetTop;
 
 document.addEventListener("scroll", debounce(fixNav, 10));
+
+const allSkills = [
+  {
+    name: "html",
+    level: "medium",
+    logo: "./img/html.png"
+  },
+  {
+    name: "css",
+    level: "medium",
+    logo: "./img/css.png"
+  },
+  {
+    name: "jquery",
+    level: "medium",
+    logo: "./img/jquery.png"
+  },
+  {
+    name: "js",
+    level: "medium",
+    logo: "./img/js.png"
+  },
+  {
+    name: "git",
+    level: "high",
+    logo: "./img/git.png"
+  },
+  {
+    name: "python",
+    level: "high",
+    logo: "./img/python.png"
+  },
+  {
+    name: "saltstack",
+    level: "high",
+    logo: "./img/saltstack.png"
+  },
+  {
+    name: "docker",
+    level: "high",
+    logo: "./img/docker.png"
+  },
+  {
+    name: "terraform",
+    level: "high",
+    logo: "./img/terraform.png"
+  }
+];
+
+const skillsDiv = document.querySelector(".skills-div");
+
+const allSkillsHTML = allSkills.map(
+  skill =>
+    `<div class='skill-div'><image alt="${skill.name}" src="/img/${
+      skill.name
+    }.png"><p>${skill.name}</p></div>`
+);
+skillsDiv.innerHTML = allSkillsHTML.join("");

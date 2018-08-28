@@ -212,10 +212,24 @@ nav a:hover {
 }
 
 .skill-div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill-div img {
   border: 1px solid #f00;
   border-radius: 50%;
-  height: 15vmin;
-  text-align: center;
-  width: 15vmin;
+  margin: 0;
+  max-width: 10vmin;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
