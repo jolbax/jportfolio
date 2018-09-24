@@ -15,9 +15,15 @@ header {
   text-align: center;
 }
 
-h1 {
+.h1-header {
   color: white;
   font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.h1-title {
+  color: black;
+  font-size: 3vw;
   text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -153,7 +159,7 @@ nav a:hover {
   margin: 70px auto;
   max-width: 700px;
   padding: 40px;
-  text-align: justify;
+  text-align: center;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
   -webkit-transition: -webkit-transform .5s;
@@ -178,8 +184,8 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 700px;
   padding: 10px;
-  width: 60vw;
 }
 
 .aboutme-div img {
@@ -206,9 +212,11 @@ nav a:hover {
   height: 40vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
   margin: 0;
+  max-width: 700px;
   padding: 0;
-  width: 60vw;
 }
 
 .skill-div {
@@ -229,7 +237,7 @@ nav a:hover {
   border: 1px solid #f00;
   border-radius: 50%;
   margin: 0;
-  max-width: 10vmin;
+  max-width: 8vmin;
   padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

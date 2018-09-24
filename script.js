@@ -140,7 +140,7 @@ links.forEach(link =>
 based on WesBos example */
 const topOfNav = nav.offsetTop;
 
-document.addEventListener("scroll", debounce(fixNav, 10));
+document.addEventListener("scroll", fixNav);
 
 const allSkills = [
   {
