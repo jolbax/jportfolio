@@ -146,47 +146,47 @@ const allSkills = [
   {
     name: "html",
     level: "medium",
-    logo: "./img/html.png"
+    logo: "img/html.png"
   },
   {
     name: "css",
     level: "medium",
-    logo: "./img/css.png"
+    logo: "img/css.png"
   },
   {
     name: "jquery",
     level: "medium",
-    logo: "./img/jquery.png"
+    logo: "img/jquery.png"
   },
   {
     name: "js",
     level: "medium",
-    logo: "./img/js.png"
+    logo: "img/js.png"
   },
   {
     name: "git",
     level: "high",
-    logo: "./img/git.png"
+    logo: "img/git.png"
   },
   {
     name: "python",
     level: "high",
-    logo: "./img/python.png"
+    logo: "img/python.png"
   },
   {
     name: "saltstack",
     level: "high",
-    logo: "./img/saltstack.png"
+    logo: "img/saltstack.png"
   },
   {
     name: "docker",
     level: "high",
-    logo: "./img/docker.png"
+    logo: "img/docker.png"
   },
   {
     name: "terraform",
     level: "high",
-    logo: "./img/terraform.png"
+    logo: "img/terraform.png"
   }
 ];
 
