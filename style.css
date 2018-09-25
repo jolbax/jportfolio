@@ -110,7 +110,7 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid red;
+  border: 1px solid none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.116);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,7 +172,7 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #f00;
+  border: 1px solid none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,19 +189,19 @@ nav a:hover {
 }
 
 .aboutme-div img {
-  border: 1px solid #f00;
+  border: 1px solid none;
   border-radius: 20%;
   margin: 10px;
   max-height: 20vh;
   padding: 10px;
 }
 
-.skills-div {
+.skills-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  border: 1px solid #f00;
+  border: 1px solid none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,20 +210,30 @@ nav a:hover {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   height: 40vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  margin: 0;
+  margin: 5px;
   max-width: 700px;
   padding: 0;
+}
+
+.skill-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .skill-div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #f00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,10 +244,16 @@ nav a:hover {
 }
 
 .skill-div img {
-  border: 1px solid #f00;
+  border: 1px solid none;
   border-radius: 50%;
   margin: 0;
-  max-width: 8vmin;
+  max-width: 100px;
   padding: 0;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  height: 5px;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=style.css.map */
