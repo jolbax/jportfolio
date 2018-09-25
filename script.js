@@ -142,60 +142,37 @@ const topOfNav = nav.offsetTop;
 
 document.addEventListener("scroll", fixNav);
 
-const allSkills = [
-  {
-    name: "html",
-    level: "medium",
-    logo: "img/html.png"
-  },
-  {
-    name: "css",
-    level: "medium",
-    logo: "img/css.png"
-  },
-  {
-    name: "jquery",
-    level: "medium",
-    logo: "img/jquery.png"
-  },
-  {
-    name: "js",
-    level: "medium",
-    logo: "img/js.png"
-  },
-  {
-    name: "git",
-    level: "high",
-    logo: "img/git.png"
-  },
-  {
-    name: "python",
-    level: "high",
-    logo: "img/python.png"
-  },
-  {
-    name: "saltstack",
-    level: "high",
-    logo: "img/saltstack.png"
-  },
-  {
-    name: "docker",
-    level: "high",
-    logo: "img/docker.png"
-  },
-  {
-    name: "terraform",
-    level: "high",
-    logo: "img/terraform.png"
-  }
-];
+const skillsDiv = document.querySelector(".skills-container");
 
-const skillsDiv = document.querySelector(".skills-div");
+fetch("skills.json")
+  .then(blob =>
+    blob.json().then(allSkills => {
+      console.log(allSkills);
+      allSkills.map(skill => {
+        let levelColor = "green";
+        let element = document.createElement("div");
+        if (skill.level < 80) {
+          levelColor = "orange";
+        } else if (skill.level < 60) {
+          levelColor = "yellow";
+        }
+        element.classList.add("skill-wrapper");
+        element.innerHTML = `
+        <div class='skill-wrapper'>
+          <div class='skill-div'>
+            <image alt="${skill.name}" src="img/${skill.name}.png">
+            <p>${skill.name}</p>
+          </div>
+          <div class='skill-bar'>
+            <div style="width: ${skill.level}%; height: 5px; background-color: ${levelColor};"></div>
+          </div>
+        </div>
+     `;
+        skillsDiv.appendChild(element);
+      });
+    })
+  )
+  .catch(e => {
+    console.log(`An error occurred: ${e}`);
+  });
 
-const allSkillsHTML = allSkills.map(
-  skill =>
-    `<div class='skill-div'><image alt="${skill.name}" src="img/${
-      skill.name
-    }.png"><p>${skill.name}</p></div>`
-);
-skillsDiv.innerHTML = allSkillsHTML.join("");

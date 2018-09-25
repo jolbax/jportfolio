@@ -1,0 +1,56 @@
+[
+    {
+    "name": "html",
+    "level": 80,
+    "area": "Front-end",
+    "logo": "img/html.png"
+    },
+    {
+    "name": "css",
+    "level": 60,
+    "area": "Front-end",
+    "logo": "img/css.png"
+    },
+    {
+    "name": "jquery",
+    "level": 60,
+    "area": "Front-end",
+    "logo": "img/jquery.png"
+    },
+    {
+    "name": "js",
+    "level": 60,
+    "area": "Front-end",
+    "logo": "img/js.png"
+    },
+    {
+    "name": "git",
+    "level": 80,
+    "area": "DevOps",
+    "logo": "img/git.png"
+    },
+    {
+    "name": "python",
+    "level": 50,
+    "area": "Backend",
+    "logo": "img/python.png"
+    },
+    {
+    "name": "saltstack",
+    "level": 80,
+    "area": "DevOps",
+    "logo": "img/saltstack.png"
+    },
+    {
+    "name": "docker",
+    "level": 80,
+    "area": "DevOps",
+    "logo": "img/docker.png"
+    },
+    {
+    "name": "terraform",
+    "level": 80,
+    "area": "DevOps",
+    "logo": "img/terraform.png"
+    }
+]
