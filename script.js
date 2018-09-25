@@ -194,7 +194,7 @@ const skillsDiv = document.querySelector(".skills-div");
 
 const allSkillsHTML = allSkills.map(
   skill =>
-    `<div class='skill-div'><image alt="${skill.name}" src="/img/${
+    `<div class='skill-div'><image alt="${skill.name}" src="img/${
       skill.name
     }.png"><p>${skill.name}</p></div>`
 );
